@@ -6,6 +6,7 @@ if (isset($_POST['send'])) {
     $background_color = set_background_color($background_color);
     echo $background_color . "\n" . $_POST['radio'];
 }
+$test = '';
 ?>
 <!doctype html>
 <html lang="en">
