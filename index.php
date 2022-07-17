@@ -88,7 +88,7 @@ foreach ($users as $user) {
 }
 
 ?>
-
+<h1>Hello Mostafa</h1>
 {master}
 </body>
 </html>
