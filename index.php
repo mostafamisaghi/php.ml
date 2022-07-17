@@ -9,7 +9,6 @@ if (isset($_POST['send'])) {
 $test = '';
 ?>
 <!doctype html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -24,7 +23,7 @@ $test = '';
 </head>
 <body style="background-color: <?php echo $background_color; ?>">
 <?php
-//if(my_login('user1')){
+if(my_login('user1')){
 //    echo "Welcome";
 //}else{
 //    echo "Login";
@@ -47,36 +46,36 @@ $test = '';
     </tr>
 
     <?php if (get_users() && count(get_users())>0): ?>
-    <?php foreach (get_users() as $user): ?>
+        <?php foreach (get_users() as $user): ?>
 
-        <tr>
-            <td><?php echo $user['id'] ?></td>
-            <td><?php echo $user['name'] ?></td>
-            <td><?php echo $user['email'] ?></td>
-            <td><a href="function.php?id=<?php echo $user['id'] ?>">Del</a> | <a
-                        href="function.php?id=<?php echo $user['id'] ?>">Up</a></td>
-        </tr>
+            <tr>
+                <td><?php echo $user['id'] ?></td>
+                <td><?php echo $user['name'] ?></td>
+                <td><?php echo $user['email'] ?></td>
+                <td><a href="function.php?id=<?php echo $user['id'] ?>">Del</a> | <a
+                            href="function.php?id=<?php echo $user['id'] ?>">Up</a></td>
+            </tr>
 
-    <?php endforeach; ?>
+        <?php endforeach; ?>
     <?php else: echo "there is no user here!!!"?>
     <?php endif; ?>
 
 </table>
 <br><br><br>
 <table>
-<?php for ($i = 0; $i < 10; $i++): ?>
-    <tr>
-    <?php for ($j = 0; $j < 5; $j++): ?>
-        <?php
-        $r = mt_rand(0, 255);
-        $g = mt_rand(0, 255);
-        $b = mt_rand(0, 255);
-        $rgb = $r . ',' . $g . ',' . $b;
-        ?>
-        <td style="background-color: rgb(<?php echo $rgb; ?>)"><?php echo $rgb; ?></td>
+    <?php for ($i = 0; $i < 10; $i++): ?>
+        <tr>
+            <?php for ($j = 0; $j < 5; $j++): ?>
+                <?php
+                $r = mt_rand(0, 255);
+                $g = mt_rand(0, 255);
+                $b = mt_rand(0, 255);
+                $rgb = $r . ',' . $g . ',' . $b;
+                ?>
+                <td style="background-color: rgb(<?php echo $rgb; ?>/*)">*/<?php echo $rgb; ?></td>
+            <?php endfor; ?>
+        </tr>
     <?php endfor; ?>
-    </tr>
-<?php endfor; ?>
 </table>
 
 
@@ -93,3 +92,4 @@ foreach ($users as $user) {
 
 </body>
 </html>
+
