@@ -89,7 +89,7 @@ foreach ($users as $user) {
 
 ?>
 
-{}
+{master}
 </body>
 </html>
 
