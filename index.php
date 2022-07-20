@@ -24,11 +24,11 @@ $test = '';
 <body style="background-color: <?php echo $background_color; ?>">
 <?php
 if(my_login('user1')){
-//    echo "Welcome";
-//}else{
-//    echo "Login";
-//}
-//?>
+    echo "Welcome";
+}else{
+    echo "Login";
+}
+?>
 <form action="" method="post">
     <input type="radio" name="radio" value="red">RED
     <input type="radio" name="radio" value="green">GREEN
@@ -91,7 +91,7 @@ foreach ($users as $user) {
 
 <h1>Hello Master</h1>
 
-{master}
+
 </body>
 </html>
 
