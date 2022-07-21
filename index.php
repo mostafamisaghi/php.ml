@@ -89,7 +89,7 @@ foreach ($users as $user) {
 
 ?>
 
-<h1>Hello Master</h1>
+<h1>Hello Masterr</h1>
 
 
 </body>
